@@ -98,15 +98,18 @@
                     <h2>Our Biodata</h2>
                     <p>To fulfill the final semester exam assignment of the web design course.</p>
                 </header>
-                @foreach ($portfolioData as $data)
                 <article class="cf" style="display: flex; justify-content: center; align-items: center; text-align: center;">
                     <div class="img-circle-div" style="margin: 20px;">
                         <img src="images/aden.jpeg" style="border-radius: 50%;"/>
                         <h3>Adentiarno Al Madani</h3>
                         <p>3rd semester student of Banjarmasin State Polytechnic</p>
                     </div>
+                    <div class="img-circle-div" style="margin: 20px;">
+                        <img src="images/ziyan.jpeg" style="border-radius: 50%;"/>
+                        <h3>Ahmad Ghazian Milzam</h3>
+                        <p>3rd semester student of Banjarmasin State Polytechnic</p>
+                    </div>
                 </article>
-                @endforeach
             </div>
         </section>
         
