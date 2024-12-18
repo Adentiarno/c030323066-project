@@ -8,8 +8,7 @@ use Filament\Forms\Form;
 use App\Models\Portfolio;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
-use Filament\Forms\Components\Textarea;
-use Filament\Tables\Actions\EditAction;
+use Filament\Pages\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\ImageColumn;
@@ -28,16 +27,13 @@ class PortfolioResource extends Resource
 {
     protected static ?string $model = Portfolio::class;
 
-    protected static ?string $navigationLabel = 'Portfolios'; // Menentukan label di sidebar
-    protected static ?string $navigationGroup = 'Content'; // Menentukan grup di sidebar (opsional)
-
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-            TextInput::make('nama')->required()->label('Nama'),
+                TextInput::make('nama')->required()->label('Nama'),
             TextInput::make('nim')->required()->label('NIM'),
             TextInput::make('email')->required()->email()->label('Email'),
             TextInput::make('phone')->required()->label('Phone'),
