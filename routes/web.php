@@ -2,9 +2,13 @@
 
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\PortfolioController;
+use App\Models\Portfolio;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontController::class, 'index'])->name('front.index');
+
+Route::get('/portfolio', [PortfolioController::class, 'index']);
 
 Route::get('/browse/{category:slug}', [FrontController::class, 'category'])->name('front.category');
 
@@ -20,4 +24,3 @@ Route::get('/booking/{workshop:slug}', [BookingController::class, 'booking'])->n
 Route::post('/booking/{workshop:slug}', [BookingController::class, 'bookingStore'])->name('front.booking_store');
 
 Route::get('/booking/finished/{bookingTransaction}', [BookingController::class, 'bookingFinished'])->name('front.booking_finished');
-
